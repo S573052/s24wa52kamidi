@@ -20,7 +20,7 @@ router.get('/', function (req, res, next) {
     for (let x in req.query) {
       console.log(x);
       res.render('computation', {
-        value1: `Math.fround() applied to ${req.query[x]} is ${Math.log2(req.query[x])}`,
+        value1: `Math.fround() applied to ${req.query[x]} is ${Math.fround(req.query[x])}`,
         value2: `Math.random() applied to ${req.query[x]} is ${Math.random(req.query[x])}`,
         value3: `Math.round() applied to ${req.query[x]} is ${Math.round(req.query[x])}`
       });
